@@ -29,7 +29,7 @@ const BlogDetail = () => {
       <header className="bg-zinc-900/50 border-b border-zinc-800">
         <div className="container mx-auto px-4 py-4">
           <button
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/#blogspot')}
             className="text-zinc-400 hover:text-zinc-300 transition-colors flex items-center gap-2"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -84,7 +84,7 @@ const Navbar = ({ navOpen }) => {
             className: 'nav-link'
         },
         {
-            label: 'Blogspot',
+            label: 'Articles',
             link: '#blogspot',
             className: 'nav-link'
         },
