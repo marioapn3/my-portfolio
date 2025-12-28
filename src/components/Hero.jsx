@@ -13,15 +13,15 @@ const Hero = () => {
 
 
                         <div className="flex items-center gap-1.5 text-zinc-400 text-md tracking-wide">
-                            Hello everyone👋🏻, my name is
+                            Hello everyone👋🏻 my name is
                         </div>
 
                     </div>
 
                     <h2 className="headline-1 max-w-[20ch] sm:max-w-[25ch] lg:max-w-[15ch] ">
                         Mario Aprilnino Prasetyo</h2>
-                    <h2 className="headline-3 max-w-[25ch] sm:max-w-[25ch] lg:max-w-[30ch] ">
-                        I am a Backend Developer </h2>
+                    <h2 className="headline-2 max-w-[25ch] sm:max-w-[25ch] lg:max-w-[30ch] ">
+                        Backend Developer </h2>
                     <div className="flex items-center gap-1.5 text-zinc-400 text-md tracking-wide mt-2  mb-8 lg:mb-10">
                         I&apos;m passionate about building software that solves real-world problems.
                     </div>
