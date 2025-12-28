@@ -2,6 +2,61 @@ import ProjectCard from './ProjectCard';
 
 const projects = [
     {
+        title: "MyFusionPay",
+        href: "https://www.myfusionpay.com/",
+        dates: "Oktober - December 2025",
+        active: true,
+        description: "FusionPay is a non-custodial Web3 connector that simplifies cross-border payments, smart wallet access, and real-world crypto utility with no accounts or complexity.",
+        technologies: [
+            "Golang",
+            "PostgreSQL",
+            "Web3 Integrations: Simplex, Superex, Particle Network",
+            "Payment Integrations: Aleta Visa Card",
+            "Blockchain APIs: Etherscan, Alchemy"
+        ],
+        image: "/images/portofolio/myfusionpay.png",
+        website: "https://www.myfusionpay.com/",
+        role: "Backend Web3 Developer"
+    },
+    {
+        title: "YouApp: Trips & Experiences",
+        href: "https://play.google.com/store/apps/details?id=com.youapp.you_app&hl=en&gl=US",
+        dates: "September - November 2025",
+        active: true,
+        description: "YouApp is a trusted experiences platform that lets you discover, book, and join real local activities hosted by verified and certified locals for meaningful, authentic travel and lifestyle experiences.",
+        technologies: [
+            "NestJS",
+            "MongoDB",
+            "Socket.IO",
+            "RabbitMQ",
+            "Redis",
+            "Firebase",
+            "Stripe",
+            "Betterpay",
+            "Google Maps API"
+        ],
+        image: "/images/portofolio/youapp.png",
+        website: "https://play.google.com/store/apps/details?id=com.youapp.you_app&hl=en&gl=US",
+        role: "Backend Developer"
+    },
+    {
+        title: "Maharbote Social",
+        href: "https://play.google.com/store/apps/details?id=com.maharbote.ai&hl=en&pli=1",
+        dates: "September - November 2025",
+        active: true,
+        description: "A global social media app with real-time chat that combines authentic Myanmar Maharbote and modern AI to connect Myanmar communities worldwide through meaningful friendships, communities, and real-life events.",
+        technologies: [
+            "NestJS",
+            "PostgreSQL",
+            "Socket.IO",
+            "Firebase",
+            "Google Maps API"
+        ],
+        image: "/images/portofolio/maharbote2.png",
+        website: "https://play.google.com/store/apps/details?id=com.maharbote.ai&hl=en&pli=1",
+        role: "Backend Developer"
+    },
+    {
         title: "BeSTI Chatbot",
         href: "https://sti.dinus.id",
         dates: "April 2025",
@@ -16,7 +71,7 @@ const projects = [
         ],
         image: "/images/portofolio/besti.webp",
         website: "https://sti.dinus.id",
-        role : "Backend Developer"
+        role: "Backend Developer"
     },
     {
         title: "STI (Sarjana Teknik Informatika) Apps Udinus",
@@ -32,7 +87,7 @@ const projects = [
         ],
         image: "/images/portofolio/sti.webp",
         website: "https://sti.dinus.id",
-        role : "Backend Developer"
+        role: "Backend Developer"
     },
     {
         title: "Reservasi Udinus",
@@ -48,7 +103,7 @@ const projects = [
         ],
         image: "/images/portofolio/reservasi.webp",
         website: "https://reservasi.bengkelkoding.dinus.id",
-        role : "DevOps"
+        role: "DevOps"
     },
     {
         title: "Konteks",
@@ -65,7 +120,7 @@ const projects = [
         ],
         image: "/images/portofolio/konteks.webp",
         website: "https://konteks.biz",
-        role : "Backend Developer"
+        role: "Backend Developer"
     },
     {
         title: "Monago",
@@ -84,7 +139,7 @@ const projects = [
         ],
         image: "/images/portofolio/monago.webp",
         website: "https://monago.io",
-        role : "Backend Developer"
+        role: "Backend Developer"
     },
 
     {
@@ -103,7 +158,7 @@ const projects = [
         ],
         image: "/images/portofolio/bsp.svg",
         website: "https://bsptracking.my.id/",
-        role : "Fullstack Developer"
+        role: "Fullstack Developer"
     },
 
     {
@@ -122,7 +177,7 @@ const projects = [
         ],
         image: "/images/portofolio/senikita.my.id.svg ",
         website: "https://senikita.my.id",
-        role : "Backend Developer"
+        role: "Backend Developer"
     },
 
 
@@ -141,7 +196,7 @@ const projects = [
         ],
         image: "/images/portofolio/studynest.svg",
         website: "https://studynest.dnccudinus.org/",
-        role : "Backend Developer"
+        role: "Backend Developer"
     },
 
     {
@@ -159,7 +214,7 @@ const projects = [
         ],
         image: "/images/portofolio/jurnalin1.svg  ",
         website: "https://jurnalin.dnccudinus.org",
-        role : "Fullstack Developer"
+        role: "Fullstack Developer"
     },
     {
         title: "Sirekam Poltekes Yogyakarta",
@@ -174,9 +229,9 @@ const projects = [
         ],
         image: "/images/portofolio/sirekam.svg",
         website: "https://sirekampolkesyogya.com/",
-        role : "Backend Developer"
+        role: "Backend Developer"
     },
-  
+
     {
         title: "Dinacom DNCC",
         href: "https://dinacom.dnccudinus.org/",
@@ -192,7 +247,7 @@ const projects = [
         ],
         image: "/images/portofolio/dinacom.svg",
         website: "https://dinacom.dnccudinus.org/",
-        role : "Fullstack Developer"
+        role: "Fullstack Developer"
     },
     {
         title: "Devlearn",
@@ -207,7 +262,7 @@ const projects = [
         ],
         image: "/images/portofolio/devlearn.svg",
         website: "https://learn.dnccudinus.org/",
-        role : "Fullstack Developer"
+        role: "Fullstack Developer"
     },
     {
         title: "Getasan Apps",
@@ -223,7 +278,7 @@ const projects = [
         ],
         image: "/images/portofolio/getasan.svg",
         github: "https://github.com/marioapn3/AsetGetasan",
-        role : "Fullstack Developer"
+        role: "Fullstack Developer"
     },
     {
         title: "Kompas Clone",
@@ -236,7 +291,7 @@ const projects = [
         ],
         image: "/images/portofolio/ui_compas.svg  ",
         github: "https://github.com/marioapn3/slicing_ui_kompas_clone",
-        role : "Mobile Developer"
+        role: "Mobile Developer"
     },
 ];
 

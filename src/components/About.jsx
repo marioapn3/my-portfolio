@@ -29,7 +29,16 @@ const About = () => {
                         <div className="mt-3">
                             <div className="flex flex-col justify-between sm:flex-row sm:items-start">
                                 <div className="flex-1">
-                                    <h4 className="headline-4">Backend Developer - Monago (Intern)</h4>
+                                    <h4 className="headline-4">Backend Developer - YouApp PT. Macaroon Pte. Ltd. </h4>
+                                    <p className="text-sm text-zinc-400">Developed backend services for the YouApp platform and developed the fintech web3 product MyFusionPay.</p>
+                                </div>
+                                <p className="text-zinc-300 text-sm sm:ml-4">September 2025 - present</p>
+                            </div>
+                        </div>
+                        <div className="mt-3">
+                            <div className="flex flex-col justify-between sm:flex-row sm:items-start">
+                                <div className="flex-1">
+                                    <h4 className="headline-4">Backend Developer - Monago </h4>
                                     <p className="text-sm text-zinc-400">Built decision support systems and chatbot integrations using FastAPI, NestJS, MongoDB, and LangChain.</p>
                                 </div>
                                 <p className="text-zinc-300 text-sm sm:ml-4">Nov 2024 - Jul 2025</p>
@@ -38,7 +47,7 @@ const About = () => {
                         <div className="mt-3">
                             <div className="flex flex-col justify-between sm:flex-row sm:items-start">
                                 <div className="flex-1">
-                                    <h4 className="headline-4">Backend Developer - Bengkel Koding (Intern)</h4>
+                                    <h4 className="headline-4">Backend Developer - Bengkel Koding </h4>
                                     <p className="text-sm text-zinc-400">Developed REST APIs, optimized databases, and deployed machine learning models.</p>
                                 </div>
                                 <p className="text-zinc-300 text-sm sm:ml-4">Aug 2024 - present</p>

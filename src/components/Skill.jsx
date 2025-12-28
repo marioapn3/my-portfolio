@@ -3,6 +3,11 @@ import SkillCard from "./SkillCard";
 const Skill = () => {
     const skillItem = [
         {
+            imgSrc: '/images/rmq.png',
+            label: 'RabbitMQ',
+            desc: 'Message Broker'
+        },
+        {
             imgSrc: '/images/nestjs.svg',
             label: 'NestJS',
             desc: 'Backend Tools'
