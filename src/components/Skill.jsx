@@ -94,12 +94,14 @@ const Skill = () => {
     return (
         <section className="section" id="skills">
             <div className="container">
-                <h2 className="headline-2">
-                    Essensial Tools & Technologies
-                </h2>
+                <div className="flex items-center gap-3 mb-4">
+                    <div className="w-2 h-12 bg-teal-400 border-2 border-black"></div>
+                    <h2 className="headline-2">
+                        Essensial Tools & Technologies
+                    </h2>
+                </div>
 
-
-                <p className="mt-3 mb-8 text-zinc-400 max-w-[50ch]">
+                <p className="mt-3 mb-8 text-black max-w-[50ch] font-mono border-l-4 border-black pl-4 py-2">
                     Discover the tools and technologies that I use to build modern websites and applications.
                 </p>
 
@@ -111,11 +113,9 @@ const Skill = () => {
                                 imgSrc={item.imgSrc}
                                 label={item.label}
                                 desc={item.desc}
-
                             />
                         ))
                     }
-
                 </div>
             </div>
         </section>

@@ -46,7 +46,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="section">
+        <footer className="section border-t-4 border-black bg-white">
             <div className="container">
 
                 <div className="lg:grid lg:grid-cols-2">
@@ -66,43 +66,41 @@ const Footer = () => {
                     <div className="grid grid-cols-2 gap-4 lg:pl-20">
 
                         <div className="">
-                            <p className="mb-2">Sitemap</p>
+                            <p className="mb-2 font-bold text-black font-mono uppercase border-b-2 border-black pb-1">Sitemap</p>
                             <ul className="">
                                 {sitemap.map((item, index) => (
                                     <li key={index}>
-                                        <a href={item.href} className="block py-1 text-sm transition-colors text-zinc-400 hover:text-zinc-200">
+                                        <a href={item.href} className="block py-1 text-sm text-black hover:bg-teal-400 font-mono uppercase border-l-2 border-transparent hover:border-black pl-2">
                                             {item.label}
                                         </a>
                                     </li>
                                 ))}
-
                             </ul>
                         </div>
 
                         <div className="">
-                            <p className="mb-2">Social</p>
+                            <p className="mb-2 font-bold text-black font-mono uppercase border-b-2 border-black pb-1">Social</p>
                             <ul className="">
                                 {socials.map((item, index) => (
                                     <li key={index}>
-                                        <a href={item.href} target="_blank" className="block py-1 text-sm transition-colors text-zinc-400 hover:text-zinc-200">
+                                        <a href={item.href} target="_blank" className="block py-1 text-sm text-black hover:bg-teal-400 font-mono uppercase border-l-2 border-transparent hover:border-black pl-2">
                                             {item.label}
                                         </a>
                                     </li>
                                 ))}
-
                             </ul>
                         </div>
 
                     </div>
                 </div>
 
-                <div className="flex items-center justify-between pt-10 mb-8">
-                    <a href="" className="">
-                        <img src="favicon.ico" alt="" className="" width={40} height={40} />
+                <div className="flex items-center justify-between pt-10 mb-8 border-t-4 border-black mt-8">
+                    <a href="" className="border-2 border-black p-1">
+                        <img src="favicon.ico" alt="" className="border-2 border-black" width={40} height={40} />
                     </a>
 
-                    <p className="text-sm text-zinc-500">
-                        &copy; 2024 <span className="text-zinc-200">Mario Aprilnino Prasetyo</span>
+                    <p className="text-sm text-black font-mono font-bold">
+                        &copy; 2024 <span className="bg-teal-400 px-2 py-1 border-2 border-black">Mario Aprilnino Prasetyo</span>
                     </p>
                 </div>
             </div>

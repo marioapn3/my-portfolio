@@ -8,13 +8,13 @@ const BlogDetail = () => {
 
   if (!post) {
     return (
-      <div className="min-h-screen bg-zinc-950 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-zinc-100 mb-4">Post Not Found</h1>
-          <p className="text-zinc-400 mb-6">The blog post you&apos;re looking for doesn&apos;t exist.</p>
+      <div className="min-h-screen bg-white flex items-center justify-center border-4 border-black">
+        <div className="text-center border-4 border-black p-8 bg-teal-400">
+          <h1 className="text-2xl font-bold text-black mb-4 font-mono uppercase">Post Not Found</h1>
+          <p className="text-black mb-6 font-mono">The blog post you&apos;re looking for doesn&apos;t exist.</p>
           <button
             onClick={() => navigate('/')}
-            className="bg-sky-400 text-zinc-950 px-6 py-2 rounded-lg font-medium hover:bg-sky-300 transition-colors"
+            className="bg-black text-teal-400 px-6 py-2 border-2 border-black font-bold hover:bg-teal-400 hover:text-black font-mono uppercase"
           >
             Back to Home
           </button>
@@ -24,16 +24,16 @@ const BlogDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-zinc-950">
+    <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-zinc-900/50 border-b border-zinc-800">
+      <header className="bg-white border-b-4 border-black">
         <div className="container mx-auto px-4 py-4">
           <button
             onClick={() => navigate('/#blogspot')}
-            className="text-zinc-400 hover:text-zinc-300 transition-colors flex items-center gap-2"
+            className="text-black hover:bg-teal-400 border-2 border-black px-4 py-2 font-bold font-mono uppercase flex items-center gap-2"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
             Back to Blog
           </button>
@@ -42,43 +42,43 @@ const BlogDetail = () => {
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
-        <article className="max-w-4xl mx-auto">
+        <article className="max-w-4xl mx-auto border-4 border-black p-8 bg-white">
           {/* Article Header */}
           <header className="mb-8">
             <div className="flex items-center gap-3 mb-4">
               <img
                 src={post.image}
                 alt={post.title}
-                className="w-12 h-12 rounded-lg bg-zinc-700 p-2"
+                className="w-12 h-12 border-2 border-black bg-white p-2"
               />
               <div className="flex-1">
-                <span className="text-sm text-zinc-400 uppercase tracking-wide">
+                <span className="text-sm text-black uppercase tracking-wide font-mono font-bold">
                   {post.category}
                 </span>
               </div>
-              <span className="text-sm text-zinc-500">{post.readTime}</span>
+              <span className="text-sm text-black font-mono font-bold">{post.readTime}</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-zinc-100 mb-4 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-4 leading-tight font-mono uppercase">
               {post.title}
             </h1>
 
-            <p className="text-xl text-zinc-400 mb-6 leading-relaxed">
+            <p className="text-xl text-black mb-6 leading-relaxed font-mono border-l-4 border-black pl-4">
               {post.excerpt}
             </p>
 
-            <div className="flex items-center justify-between flex-wrap gap-4">
+            <div className="flex items-center justify-between flex-wrap gap-4 border-t-4 border-black pt-4">
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-sky-400 rounded-full flex items-center justify-center">
-                    <span className="text-zinc-950 font-bold text-sm">
+                  <div className="w-8 h-8 bg-teal-400 border-2 border-black flex items-center justify-center">
+                    <span className="text-black font-bold text-sm font-mono">
                       {post.author.split(' ').map(n => n[0]).join('')}
                     </span>
                   </div>
-                  <span className="text-zinc-300">{post.author}</span>
+                  <span className="text-black font-mono font-bold">{post.author}</span>
                 </div>
-                <span className="text-zinc-500">•</span>
-                <span className="text-zinc-400">
+                <span className="text-black font-bold">•</span>
+                <span className="text-black font-mono">
                   {new Date(post.date).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
@@ -91,7 +91,7 @@ const BlogDetail = () => {
                 {post.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1 bg-zinc-800 text-zinc-300 text-sm rounded-full border border-zinc-700"
+                    className="px-3 py-1 bg-white text-black text-sm border-2 border-black font-mono font-bold uppercase"
                   >
                     {tag}
                   </span>
@@ -102,30 +102,29 @@ const BlogDetail = () => {
 
           {/* Article Content */}
           <div 
-            className="prose prose-invert prose-lg max-w-none
-              prose-headings:text-zinc-100 prose-headings:font-bold
-              prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
-              prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
-              prose-p:text-zinc-300 prose-p:leading-relaxed prose-p:mb-6
-              prose-ul:text-zinc-300 prose-ul:mb-6
-              prose-li:mb-2
-              prose-strong:text-zinc-100 prose-strong:font-semibold
-              prose-code:text-sky-400 prose-code:bg-zinc-800 prose-code:px-2 prose-code:py-1 prose-code:rounded
-              prose-pre:bg-zinc-900 prose-pre:border prose-pre:border-zinc-700 prose-pre:p-6 prose-pre:rounded-lg
-              prose-pre:overflow-x-auto
-              prose-blockquote:border-l-4 prose-blockquote:border-sky-400 prose-blockquote:pl-6 prose-blockquote:italic
-              prose-blockquote:text-zinc-300"
+            className="prose prose-lg max-w-none
+              prose-headings:text-black prose-headings:font-bold prose-headings:font-mono prose-headings:uppercase
+              prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b-4 prose-h2:border-black prose-h2:pb-2
+              prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-h3:border-l-4 prose-h3:border-black prose-h3:pl-4
+              prose-p:text-black prose-p:leading-relaxed prose-p:mb-6 prose-p:font-mono
+              prose-ul:text-black prose-ul:mb-6 prose-ul:font-mono prose-ul:list-none prose-ul:border-2 prose-ul:border-black prose-ul:p-4
+              prose-li:mb-2 prose-li:before:content-['>'] prose-li:before:text-teal-400 prose-li:before:font-bold prose-li:before:mr-2
+              prose-strong:text-black prose-strong:font-bold prose-strong:bg-teal-400 prose-strong:px-1
+              prose-code:text-black prose-code:bg-white prose-code:px-2 prose-code:py-1 prose-code:border-2 prose-code:border-black prose-code:font-mono prose-code:font-bold
+              prose-pre:bg-white prose-pre:border-4 prose-pre:border-black prose-pre:p-6 prose-pre:overflow-x-auto
+              prose-blockquote:border-l-4 prose-blockquote:border-black prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:bg-teal-400 prose-blockquote:py-2 prose-blockquote:pr-2
+              prose-blockquote:text-black prose-blockquote:font-mono prose-blockquote:font-bold"
             dangerouslySetInnerHTML={{ __html: post.body }}
           />
         </article>
 
         {/* Related Articles */}
-        <section className="mt-16 pt-8 border-t border-zinc-800">
-          <h2 className="text-2xl font-bold text-zinc-100 mb-6">Related Articles</h2>
+        <section className="mt-16 pt-8 border-t-4 border-black">
+          <h2 className="text-2xl font-bold text-black mb-6 font-mono uppercase">Related Articles</h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {/* You can add related articles here based on category or tags */}
-            <div className="bg-zinc-800/50 rounded-2xl p-6 border border-zinc-700/50">
-              <p className="text-zinc-400 text-sm">More articles coming soon...</p>
+            <div className="bg-white border-4 border-black p-6">
+              <p className="text-black text-sm font-mono font-bold">More articles coming soon...</p>
             </div>
           </div>
         </section>

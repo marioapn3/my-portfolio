@@ -53,17 +53,20 @@ const Contact = () => {
     return (
         <section className="section" id="contact">
             <div className="container">
-                <h2 className="headline-2">
-                    Contact me for collaboration
-                </h2>
-                <p className="mt-3 mb-8 text-zinc-400 max-w-[50ch]">
+                <div className="flex items-center gap-3 mb-4">
+                    <div className="w-2 h-12 bg-teal-400 border-2 border-black"></div>
+                    <h2 className="headline-2">
+                        Contact me for collaboration
+                    </h2>
+                </div>
+                <p className="mt-3 mb-8 text-black max-w-[50ch] font-mono border-l-4 border-black pl-4 py-2">
                     Reach out to me for any collaboration or project. I am always open to new opportunities and projects.
                 </p>
 
-                <div className="flex items-center gap-2 mt-auto">
+                <div className="flex items-center gap-2 mt-auto flex-wrap">
                     {
                         socialLinks.map((item, index) => (
-                            <a key={index} href={item.href} target="_blank" className="grid w-12 h-12 transition-[background-color,color] rounded-lg place-items-center ring-inset ring-2 ring-zinc-50/5 hover:bg-zinc-50 hover:text-zinc-950">
+                            <a key={index} href={item.href} target="_blank" className="grid w-12 h-12 border-2 border-black bg-white hover:bg-teal-400 place-items-center">
                                 {item.icon}
                             </a>
                         ))

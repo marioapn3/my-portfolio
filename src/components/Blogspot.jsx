@@ -24,15 +24,17 @@ const Blogspot = () => {
     <section id="blogspot" className="section">
       <div className="container">
 
-        <h2 className="headline-2">
-        Blog & Articles
-        </h2>
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-2 h-12 bg-teal-400 border-2 border-black"></div>
+          <h2 className="headline-2">
+            Blog & Articles
+          </h2>
+        </div>
 
-        <p className="mt-3 mb-8 text-zinc-400 max-w-[70ch]">
-        Sharing insights, tutorials, and thoughts about web development, 
-        programming, and the latest technologies I&apos;ve been working with.
+        <p className="mt-3 mb-8 text-black max-w-[70ch] font-mono border-l-4 border-black pl-4 py-2">
+          Sharing insights, tutorials, and thoughts about web development, 
+          programming, and the latest technologies I&apos;ve been working with.
         </p>
-
 
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
@@ -40,10 +42,10 @@ const Blogspot = () => {
             <button
               key={category.id}
               onClick={() => setActiveTab(category.id)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+              className={`px-4 py-2 text-sm font-bold border-2 border-black font-mono uppercase ${
                 activeTab === category.id
-                  ? 'bg-sky-400 text-zinc-950'
-                  : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-300'
+                  ? 'bg-teal-400 text-black'
+                  : 'bg-white text-black hover:bg-teal-400'
               }`}
             >
               {category.name}
@@ -56,32 +58,32 @@ const Blogspot = () => {
           {filteredPosts.map((post) => (
             <article
               key={post.id}
-              className="group bg-zinc-800/50 rounded-2xl p-6 hover:bg-zinc-800/70 transition-all duration-300 border border-zinc-700/50 hover:border-zinc-600/50"
+              className="group bg-white border-4 border-black p-6 hover:bg-teal-400"
             >
               <div className="flex items-center gap-3 mb-4">
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-8 h-8 rounded-lg bg-zinc-700 p-1"
+                  className="w-8 h-8 border-2 border-black bg-white p-1"
                 />
                 <div className="flex-1">
-                  <span className="text-xs text-zinc-400 uppercase tracking-wide">
+                  <span className="text-xs text-black uppercase tracking-wide font-mono font-bold">
                     {post.category}
                   </span>
                 </div>
-                <span className="text-xs text-zinc-500">{post.readTime}</span>
+                <span className="text-xs text-black font-mono font-bold">{post.readTime}</span>
               </div>
 
-              <h3 className="headline-4 mb-3 group-hover:text-sky-400 transition-colors">
+              <h3 className="headline-4 mb-3 group-hover:text-black">
                 {post.title}
               </h3>
 
-              <p className="text-zinc-400 text-sm mb-4 line-clamp-3">
+              <p className="text-black text-sm mb-4 line-clamp-3 font-mono">
                 {post.excerpt}
               </p>
 
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-zinc-500">
+              <div className="flex items-center justify-between border-t-2 border-black pt-4">
+                <span className="text-xs text-black font-mono font-bold">
                   {new Date(post.date).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'short',
@@ -90,7 +92,7 @@ const Blogspot = () => {
                 </span>
                 <button 
                   onClick={() => handleReadMore(post.id)}
-                  className="text-sky-400 text-sm font-medium hover:text-sky-300 transition-colors"
+                  className="text-black text-sm font-bold hover:bg-black hover:text-teal-400 px-2 py-1 border-2 border-black font-mono uppercase"
                 >
                   Read More →
                 </button>
@@ -100,8 +102,8 @@ const Blogspot = () => {
         </div>
 
         {filteredPosts.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-zinc-400">No posts found in this category.</p>
+          <div className="text-center py-12 border-4 border-black bg-white p-8">
+            <p className="text-black font-mono font-bold">No posts found in this category.</p>
           </div>
         )}
       </div>

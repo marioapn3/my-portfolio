@@ -50,7 +50,7 @@ func fetchUserData(ctx context.Context, userID string) error {
         The <code>context.WithValue</code> function is used to securely carry immutable, request-scoped data, most commonly correlation IDs (for logging) or tracing spans (for distributed tracing systems like OpenTelemetry). This allows logs from different goroutines to be linked back to a single incoming request.
       </p>
 
-      <blockquote class="border-l-4 border-yellow-500 bg-yellow-100 p-3 my-4">
+      <blockquote class="border-l-4 border-teal-500 bg-teal-100 p-3 my-4">
         **Best Practice Note:** Avoid passing mutable objects or required dependencies through context values. Context is primarily for transport metadata (deadlines, cancellation, tracing IDs), not dependency injection.
       </blockquote>
 

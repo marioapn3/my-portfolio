@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Brutalist Fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 /* utilities */
 .material-symbols-rounded {
   @apply w-[1em] h-[1em] overflow-hidden;
@@ -13,7 +16,7 @@
 }
 
 .img-box {
-  @apply bg-zinc-700 overflow-hidden
+  @apply bg-white overflow-hidden border-2 border-black
 }
 
 .img-cover {
@@ -31,16 +34,23 @@ html {
 }
 
 body {
-  @apply bg-zinc-900 text-zinc-50
+  @apply bg-white text-black;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
 }
 
-/* typography */
+/* Brutalist Typography */
 .headline-1 {
-  @apply text-4xl leading-tight font-semibold lg:text-[50px] lg:leading-[1.15]
+  @apply text-4xl leading-tight font-bold lg:text-[50px] lg:leading-[1.15];
+  font-family: 'Space Grotesk', 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
 
 .headline-2 {
-  @apply text-3xl lg:text-4xl lg:leading-tight font-semibold
+  @apply text-3xl lg:text-4xl lg:leading-tight font-bold;
+  font-family: 'Space Grotesk', 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
 }
 
 .headline-1,
@@ -48,62 +58,85 @@ body {
 .headline-3,
 .headline-4 {
   @apply max-w-max;
-  background: -webkit-linear-gradient(0deg, #fafafa, #a1a1a1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #000000;
+  -webkit-text-fill-color: #000000;
 }
 
 .headline-3 {
-  @apply text-xl font-semibold lg:text-2xl
+  @apply text-xl font-bold lg:text-2xl;
+  font-family: 'Space Grotesk', 'Arial Black', sans-serif;
+  text-transform: uppercase;
 }
 
 .headline-4 {
-  @apply text-lg font-semibold lg:text-xl
+  @apply text-lg font-bold lg:text-xl;
+  font-family: 'Space Grotesk', 'Arial Black', sans-serif;
+  text-transform: uppercase;
 }
 
 .unset {
   -webkit-appearance: none;
 }
 
-/* component */
+/* Brutalist Component Styles */
 .menu-btn {
-  @apply w-10 h-10 grid place-items-center bg-zinc-50/10 rounded-xl ring-inset ring-1 ring-zinc-50/[0.02] backdrop-blur-2xl hover:bg-zinc-50/15 active:scale-95
+  @apply w-10 h-10 grid place-items-center bg-white border-2 border-black hover:bg-teal-400 active:bg-teal-400;
+  box-shadow: 4px 4px 0px 0px #000000;
 }
 
-;
+.menu-btn:active {
+  box-shadow: 2px 2px 0px 0px #000000;
+  transform: translate(2px, 2px);
+}
 
 .navbar {
-  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-50/5 scale-90 isolate blur-sm opacity-0 invisible transition-all duration-300 md:static md:flex md:items-center md:mt-0 md:scale-100 md:opacity-100 md:visible md:blur-0
+  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-white border-2 border-black opacity-0 invisible md:static md:flex md:items-center md:mt-0 md:opacity-100 md:visible;
+  box-shadow: 4px 4px 0px 0px #000000;
 }
 
 .navbar.active {
-  @apply opacity-100 visible scale-100 blur-0
+  @apply opacity-100 visible;
 }
 
 .nav-link {
-  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-50/50 hover:text-zinc-50 transition-colors
+  @apply grid items-center h-9 px-4 text-sm font-bold tracking-wide text-black hover:bg-teal-400;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
 }
 
 .nav-link.active {
-  @apply text-zinc-900 duration-500
+  @apply bg-teal-400 text-black;
 }
 
 .navbar .active-box {
-  @apply absolute bg-zinc-50 rounded-lg top-2 left-2 right-2 h-9 -z-10 transition-all duration-500
+  @apply absolute bg-teal-400 top-2 left-2 right-2 h-9 -z-10;
+  border: 2px solid #000000;
 }
 
-/* button */
-
+/* Brutalist Buttons */
 .btn {
-  @apply max-w-max h-9 flex items-center gap-2 px-4 rounded-xl font-medium text-sm ring-1 ring-zinc-50/5 ring-inset transition-[background-color]
+  @apply max-w-max h-9 flex items-center gap-2 px-4 font-bold text-sm border-2 border-black;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 0px 0px #000000;
+  transform: translate(2px, 2px);
+}
+
+.btn:active {
+  box-shadow: 1px 1px 0px 0px #000000;
+  transform: translate(3px, 3px);
 }
 
 .btn-secondary {
-  @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80
+  @apply bg-white text-black hover:bg-teal-400;
 }
 
 .btn-tertiary {
-  @apply bg-zinc-50/10 text-zinc-50 hover:bg-zinc-50/15 active:bg-zinc-50/20
+  @apply bg-white text-black hover:bg-teal-400;
 }
 
 .btn .material-symbols-rounded {
@@ -115,15 +148,15 @@ body {
 }
 
 .btn-primary {
-  @apply h-11 bg-sky-400 text-zinc-950 hover:bg-sky-300 active:bg-sky-400
+  @apply h-11 bg-teal-400 text-black hover:bg-teal-500;
 }
 
 .btn-outline {
-  @apply h-11 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800
+  @apply h-11 bg-white hover:bg-teal-400;
 }
 
 .btn-sm-outline {
-  @apply h-8 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800
+  @apply h-8 bg-white hover:bg-teal-400;
 }
 
 .squares-canvas {
@@ -139,4 +172,20 @@ body {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* Brutalist Utility Classes */
+.brutal-border {
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0px 0px #000000;
+}
+
+.brutal-card {
+  @apply bg-white border-2 border-black;
+  box-shadow: 4px 4px 0px 0px #000000;
+}
+
+.brutal-card:hover {
+  box-shadow: 2px 2px 0px 0px #000000;
+  transform: translate(2px, 2px);
 }

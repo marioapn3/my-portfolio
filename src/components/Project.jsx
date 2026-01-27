@@ -299,11 +299,14 @@ const Project = () => {
     return (
         <section className='section' id='projects'>
             <div className="container">
-                <h2 className="headline-2">
-                    All Projects
-                </h2>
+                <div className="flex items-center gap-3 mb-4">
+                    <div className="w-2 h-12 bg-teal-400 border-2 border-black"></div>
+                    <h2 className="headline-2">
+                        All Projects
+                    </h2>
+                </div>
 
-                <p className="mt-3 mb-8 text-zinc-400 max-w-[70ch]">
+                <p className="mt-3 mb-8 text-black max-w-[70ch] font-mono border-l-4 border-black pl-4 py-2">
                     Here are all my projects that I have worked on. I have worked on various projects ranging from web development, mobile development, and machine learning
                 </p>
 
