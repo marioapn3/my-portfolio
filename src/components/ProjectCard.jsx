@@ -5,7 +5,7 @@ import { Github, Globe, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import PropTypes from "prop-types"
 
-export default function ProjectCard({ title, description, tags, image, video, className, github, website, role }) {
+export default function ProjectCard({ title, description, tags, image, video, className, github, website, role, modalImages }) {
   const [showModal, setShowModal] = useState(false)
 
   return (
@@ -64,12 +64,12 @@ export default function ProjectCard({ title, description, tags, image, video, cl
             </div>
           </div>
           {role && (
-                <span 
-                className="inline-block px-2 py-0.5 mt-1 text-[10px] font-bold text-black bg-teal-400 border-2 border-black font-mono uppercase mb-1"
-                >
-                  Role : {role}
-                </span>
-              )}
+            <span
+              className="inline-block px-2 py-0.5 mt-1 text-[10px] font-bold text-black bg-teal-400 border-2 border-black font-mono uppercase mb-1"
+            >
+              Role : {role}
+            </span>
+          )}
           <div className="max-w-full font-mono text-xs text-black">{description}</div>
         </div>
 
@@ -118,19 +118,23 @@ export default function ProjectCard({ title, description, tags, image, video, cl
             >
               {/* Close Button */}
               <button
-                className="absolute top-4 right-4 z-10 p-2 bg-teal-400 border-2 border-black hover:bg-black hover:text-teal-400 text-black font-bold"
+                className="absolute top-4 right-4 z-20 p-2 bg-teal-400 border-2 border-black hover:bg-black hover:text-teal-400 text-black font-bold"
                 onClick={() => setShowModal(false)}
               >
                 <X size={18} />
               </button>
 
               {/* Media Section */}
-              {(image || video) && (
+              {(image || video || (modalImages && modalImages.length > 0)) && (
                 <div className="relative overflow-hidden border-b-4 border-black">
                   {video ? (
-                    <video src={video} autoPlay loop muted playsInline className="w-full h-64 object-cover" />
+                    <video src={video} autoPlay loop muted playsInline
+                      className="w-full h-64 object-cover" />
+                  ) : modalImages && modalImages.length > 0 ? (
+                    <ModalImageGallery images={modalImages} />
                   ) : (
-                    <img src={image || "/placeholder.svg"} alt={title} className="w-full h-64 object-cover" />
+                    <img src={image || "/placeholder.svg"} alt={title}
+                      className="w-full h-64 object-cover" />
                   )}
                 </div>
               )}
@@ -218,4 +222,52 @@ ProjectCard.propTypes = {
   github: PropTypes.string,
   website: PropTypes.string,
   role: PropTypes.string,
+}
+
+function ModalImageGallery({ images }) {
+  const [current, setCurrent] = useState(0)
+  return (
+    <div className="relative w-full h-72 overflow-hidden">
+      {/* Background blur layer */}
+      <img
+        src={images[current]}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover scale-110 blur-md opacity-60 pointer-events-none"
+        aria-hidden="true"
+      />
+
+      {/* Gambar utama — contain agar tidak crop */}
+      <img
+        src={images[current]}
+        alt={`slide-${current}`}
+        className="relative z-10 w-full h-full object-contain"
+      />
+
+      {images.length > 1 && (
+        <>
+          <button
+            onClick={() => setCurrent((p) => (p - 1 + images.length) % images.length)}
+            className="absolute left-2 top-1/2 z-20 -translate-y-1/2 p-1 bg-white border-2 border-black hover:bg-teal-400 font-bold"
+          >
+            ‹
+          </button>
+          <button
+            onClick={() => setCurrent((p) => (p + 1) % images.length)}
+            className="absolute right-2 top-1/2 z-20 -translate-y-1/2 p-1 bg-white border-2 border-black hover:bg-teal-400 font-bold"
+          >
+            ›
+          </button>
+          <div className="absolute bottom-2 left-1/2 z-20 -translate-x-1/2 flex gap-1">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`w-2 h-2 border-2 border-black ${i === current ? "bg-teal-400" : "bg-white"}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  )
 }

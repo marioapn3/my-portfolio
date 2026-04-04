@@ -44,7 +44,7 @@ const About = () => {
                                     </div>
                                     <div className="flex items-center gap-2 text-sm text-black bg-white px-3 py-1.5 border-2 border-black font-mono font-bold">
                                         <Calendar className="w-4 h-4" />
-                                        <span>2022 - Now</span>
+                                        <span>Sep 2022 - Mar 2026</span>
                                     </div>
                                 </div>
                             </div>
@@ -71,23 +71,69 @@ const About = () => {
                             <div className="space-y-4">
                                 <div className="group relative bg-white p-5 border-4 border-black hover:bg-teal-400">
                                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
-                                        <div className="flex-1">
-                                            <h4 className="headline-4 mb-2">Backend Developer</h4>
-                                            <p className="text-sm font-bold text-black mb-2 font-mono uppercase">YouApp PT. Macaroon Pte. Ltd.</p>
-                                            <p className="text-sm text-black leading-relaxed font-mono">Developed backend services for the YouApp platform and developed the fintech web3 product MyFusionPay.</p>
+                                        <div className="flex-1 min-w-0">
+                                            <div className="flex items-start gap-3">
+                                                <img
+                                                    src="/images/logo-experience/youapp.jpg"
+                                                    alt="YouApp"
+                                                    width={56}
+                                                    height={56}
+                                                    className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 border-2 border-black bg-white object-contain"
+                                                />
+                                                <div className="flex-1 min-w-0">
+                                                    <h4 className="headline-4 mb-2">Lead Backend Developer</h4>
+                                                    <p className="text-sm font-bold text-black mb-2 font-mono uppercase">YouApp PT. Macaroon Pte. Ltd.</p>
+                                                    <p className="text-sm text-black leading-relaxed font-mono">Lead backend engineering for the YouApp platform: architecture, delivery, and technical direction across services.</p>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div className="flex items-center gap-2 text-sm text-black bg-white px-3 py-1.5 border-2 border-black font-mono font-bold flex-shrink-0">
                                             <Calendar className="w-4 h-4" />
-                                            <span>Sep 2025 - present</span>
+                                            <span>Mar 2026 - present</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="group relative bg-white p-5 border-4 border-black hover:bg-teal-400">
                                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
-                                        <div className="flex-1">
-                                            <h4 className="headline-4 mb-2">Backend Developer</h4>
-                                            <p className="text-sm font-bold text-black mb-2 font-mono uppercase">Monago</p>
-                                            <p className="text-sm text-black leading-relaxed font-mono">Built decision support systems and chatbot integrations using FastAPI, NestJS, MongoDB, and LangChain.</p>
+                                        <div className="flex-1 min-w-0">
+                                            <div className="flex items-start gap-3">
+                                                <img
+                                                    src="/images/logo-experience/youapp.jpg"
+                                                    alt="YouApp"
+                                                    width={56}
+                                                    height={56}
+                                                    className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 border-2 border-black bg-white object-contain"
+                                                />
+                                                <div className="flex-1 min-w-0">
+                                                    <h4 className="headline-4 mb-2">Backend Developer</h4>
+                                                    <p className="text-sm font-bold text-black mb-2 font-mono uppercase">YouApp PT. Macaroon Pte. Ltd.</p>
+                                                    <p className="text-sm text-black leading-relaxed font-mono">Developed backend services for the YouApp platform and the fintech web3 product MyFusionPay.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center gap-2 text-sm text-black bg-white px-3 py-1.5 border-2 border-black font-mono font-bold flex-shrink-0">
+                                            <Calendar className="w-4 h-4" />
+                                            <span>Sep 2025 - Feb 2026</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="group relative bg-white p-5 border-4 border-black hover:bg-teal-400">
+                                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                                        <div className="flex-1 min-w-0">
+                                            <div className="flex items-start gap-3">
+                                                <img
+                                                    src="/images/logo-experience/monago.jpg"
+                                                    alt="Monago"
+                                                    width={56}
+                                                    height={56}
+                                                    className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 border-2 border-black bg-white object-contain"
+                                                />
+                                                <div className="flex-1 min-w-0">
+                                                    <h4 className="headline-4 mb-2">Backend Developer</h4>
+                                                    <p className="text-sm font-bold text-black mb-2 font-mono uppercase">Monago</p>
+                                                    <p className="text-sm text-black leading-relaxed font-mono">Built decision support systems and chatbot integrations using FastAPI, NestJS, MongoDB, and LangChain.</p>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div className="flex items-center gap-2 text-sm text-black bg-white px-3 py-1.5 border-2 border-black font-mono font-bold flex-shrink-0">
                                             <Calendar className="w-4 h-4" />
@@ -97,10 +143,21 @@ const About = () => {
                                 </div>
                                 <div className="group relative bg-white p-5 border-4 border-black hover:bg-teal-400">
                                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
-                                        <div className="flex-1">
-                                            <h4 className="headline-4 mb-2">Backend Developer</h4>
-                                            <p className="text-sm font-bold text-black mb-2 font-mono uppercase">Bengkel Koding</p>
-                                            <p className="text-sm text-black leading-relaxed font-mono">Developed REST APIs, optimized databases, and deployed machine learning models.</p>
+                                        <div className="flex-1 min-w-0">
+                                            <div className="flex items-start gap-3">
+                                                <img
+                                                    src="/images/logo-experience/bengkel-koding.jpg"
+                                                    alt="Bengkel Koding"
+                                                    width={56}
+                                                    height={56}
+                                                    className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0 border-2 border-black bg-white object-contain"
+                                                />
+                                                <div className="flex-1 min-w-0">
+                                                    <h4 className="headline-4 mb-2">Backend Developer</h4>
+                                                    <p className="text-sm font-bold text-black mb-2 font-mono uppercase">Bengkel Koding</p>
+                                                    <p className="text-sm text-black leading-relaxed font-mono">Developed REST APIs, optimized databases, and deployed machine learning models.</p>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div className="flex items-center gap-2 text-sm text-black bg-white px-3 py-1.5 border-2 border-black font-mono font-bold flex-shrink-0">
                                             <Calendar className="w-4 h-4" />
@@ -110,10 +167,15 @@ const About = () => {
                                 </div>
                                 <div className="group relative bg-white p-5 border-4 border-black hover:bg-teal-400">
                                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
-                                        <div className="flex-1">
-                                            <h4 className="headline-4 mb-2">Full Stack Developer</h4>
-                                            <p className="text-sm font-bold text-black mb-2 font-mono uppercase">Freelance</p>
-                                            <p className="text-sm text-black leading-relaxed font-mono">Developed web and mobile apps tailored to client needs.</p>
+                                        <div className="flex-1 min-w-0">
+                                            <div className="flex items-start gap-3">
+                                                <div className="w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0" aria-hidden />
+                                                <div className="flex-1 min-w-0">
+                                                    <h4 className="headline-4 mb-2">Full Stack Developer</h4>
+                                                    <p className="text-sm font-bold text-black mb-2 font-mono uppercase">Freelance</p>
+                                                    <p className="text-sm text-black leading-relaxed font-mono">Developed web and mobile apps tailored to client needs.</p>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div className="flex items-center gap-2 text-sm text-black bg-white px-3 py-1.5 border-2 border-black font-mono font-bold flex-shrink-0">
                                             <Calendar className="w-4 h-4" />

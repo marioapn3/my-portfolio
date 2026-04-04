@@ -3,20 +3,28 @@ import ProjectCard from './ProjectCard';
 const projects = [
     {
         title: "MyFusionPay",
-        href: "https://www.myfusionpay.com/",
+        href: "https://play.google.com/store/apps/details?id=com.myfusionpay.app",
         dates: "Oktober - December 2025",
         active: true,
         description: "FusionPay is a non-custodial Web3 connector that simplifies cross-border payments, smart wallet access, and real-world crypto utility with no accounts or complexity.",
         technologies: [
             "Golang",
             "PostgreSQL",
+            "Redis",
+            "OneSignal",
             "Web3 Integrations: Simplex, Superex, Particle Network",
             "Payment Integrations: Aleta Visa Card",
             "Blockchain APIs: Etherscan, Alchemy"
         ],
         image: "/images/portofolio/myfusionpay.png",
-        website: "https://www.myfusionpay.com/",
-        role: "Backend Web3 Developer"
+        website: "https://play.google.com/store/apps/details?id=com.myfusionpay.app",
+        role: "Backend Web3 Developer",
+        modalImages : [
+            "/images/detail-projects/fusion/fusion-1.jpg",
+            "/images/detail-projects/fusion/fusion-2.jpg",
+            "/images/detail-projects/fusion/fusion-3.jpg",
+            "/images/detail-projects/fusion/fusion-4.jpg",
+        ]
     },
     {
         title: "YouApp: Trips & Experiences",
@@ -37,7 +45,13 @@ const projects = [
         ],
         image: "/images/portofolio/youapp.png",
         website: "https://play.google.com/store/apps/details?id=com.youapp.you_app&hl=en&gl=US",
-        role: "Backend Developer"
+        role: "Backend Developer",
+        modalImages : [
+            "/images/detail-projects/youapp/youapp-1.png",
+            "/images/detail-projects/youapp/youapp-2.png",
+            "/images/detail-projects/youapp/youapp-3.png",
+            "/images/detail-projects/youapp/youapp-4.png",
+        ]
     },
     {
         title: "Maharbote Social",
@@ -325,6 +339,7 @@ const Project = () => {
                             github={project.github}
                             website={project.website}
                             role={project.role}
+                            modalImages={project.modalImages}
                         />
                     ))}
                 </div>
