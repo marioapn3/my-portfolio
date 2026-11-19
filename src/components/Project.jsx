@@ -314,13 +314,13 @@ const Project = () => {
         <section className='section' id='projects'>
             <div className="container">
                 <div className="flex items-center gap-3 mb-4">
-                    <div className="w-2 h-12 bg-teal-400 border-2 border-black"></div>
+                    <div className="w-1 h-10 bg-accent rounded-full"></div>
                     <h2 className="headline-2">
                         All Projects
                     </h2>
                 </div>
 
-                <p className="mt-3 mb-8 text-black max-w-[70ch] font-mono border-l-4 border-black pl-4 py-2">
+                <p className="mt-3 mb-8 text-ink-muted max-w-[70ch] leading-relaxed border-l-2 border-accent pl-4 py-1">
                     Here are all my projects that I have worked on. I have worked on various projects ranging from web development, mobile development, and machine learning
                 </p>
 
