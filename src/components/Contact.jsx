@@ -24,57 +24,41 @@ const Contact = () => {
         },
         {
             href: 'https://wa.me/6281247430546',
-            icon: <svg className="fill-black" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="24" viewBox="0 0 24 24">
+            icon: <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="24" viewBox="0 0 24 24">
                 <path d="M 12.011719 2 C 6.5057187 2 2.0234844 6.478375 2.0214844 11.984375 C 2.0204844 13.744375 2.4814687 15.462563 3.3554688 16.976562 L 2 22 L 7.2324219 20.763672 C 8.6914219 21.559672 10.333859 21.977516 12.005859 21.978516 L 12.009766 21.978516 C 17.514766 21.978516 21.995047 17.499141 21.998047 11.994141 C 22.000047 9.3251406 20.962172 6.8157344 19.076172 4.9277344 C 17.190172 3.0407344 14.683719 2.001 12.011719 2 z M 12.009766 4 C 14.145766 4.001 16.153109 4.8337969 17.662109 6.3417969 C 19.171109 7.8517969 20.000047 9.8581875 19.998047 11.992188 C 19.996047 16.396187 16.413812 19.978516 12.007812 19.978516 C 10.674812 19.977516 9.3544062 19.642812 8.1914062 19.007812 L 7.5175781 18.640625 L 6.7734375 18.816406 L 4.8046875 19.28125 L 5.2851562 17.496094 L 5.5019531 16.695312 L 5.0878906 15.976562 C 4.3898906 14.768562 4.0204844 13.387375 4.0214844 11.984375 C 4.0234844 7.582375 7.6067656 4 12.009766 4 z M 8.4765625 7.375 C 8.3095625 7.375 8.0395469 7.4375 7.8105469 7.6875 C 7.5815469 7.9365 6.9355469 8.5395781 6.9355469 9.7675781 C 6.9355469 10.995578 7.8300781 12.182609 7.9550781 12.349609 C 8.0790781 12.515609 9.68175 15.115234 12.21875 16.115234 C 14.32675 16.946234 14.754891 16.782234 15.212891 16.740234 C 15.670891 16.699234 16.690438 16.137687 16.898438 15.554688 C 17.106437 14.971687 17.106922 14.470187 17.044922 14.367188 C 16.982922 14.263188 16.816406 14.201172 16.566406 14.076172 C 16.317406 13.951172 15.090328 13.348625 14.861328 13.265625 C 14.632328 13.182625 14.464828 13.140625 14.298828 13.390625 C 14.132828 13.640625 13.655766 14.201187 13.509766 14.367188 C 13.363766 14.534188 13.21875 14.556641 12.96875 14.431641 C 12.71875 14.305641 11.914938 14.041406 10.960938 13.191406 C 10.218937 12.530406 9.7182656 11.714844 9.5722656 11.464844 C 9.4272656 11.215844 9.5585938 11.079078 9.6835938 10.955078 C 9.7955938 10.843078 9.9316406 10.663578 10.056641 10.517578 C 10.180641 10.371578 10.223641 10.267562 10.306641 10.101562 C 10.389641 9.9355625 10.347156 9.7890625 10.285156 9.6640625 C 10.223156 9.5390625 9.737625 8.3065 9.515625 7.8125 C 9.328625 7.3975 9.131125 7.3878594 8.953125 7.3808594 C 8.808125 7.3748594 8.6425625 7.375 8.4765625 7.375 z"></path>
-            </svg >,
+            </svg>,
             alt: 'WhatsApp'
         },
         {
             href: "https://t.me/marioaprilnino",
             icon: <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" viewBox="0 0 48 48" id="telegram">
-                <rect width="48" height="48" fill="#419FD9" rx="24"></rect>
-                <rect width="48" height="48" fill="url(#paint0_linear)" rx="24"></rect>
+                <rect width="48" height="48" fill="#2AABEE" rx="24"></rect>
                 <path fill="#fff" d="M10.7874 23.4709C17.7667 20.3663 22.4206 18.3195 24.7493 17.3305C31.3979 14.507 32.7795 14.0165 33.68 14.0002C33.878 13.9968 34.3208 14.0469 34.6077 14.2845C34.8499 14.4852 34.9165 14.7563 34.9484 14.9465C34.9803 15.1368 35.02 15.5702 34.9884 15.9088C34.6281 19.774 33.0692 29.1539 32.276 33.483C31.9404 35.3148 31.2796 35.929 30.6399 35.9891C29.2496 36.1197 28.1938 35.051 26.8473 34.1497C24.7401 32.7395 23.5498 31.8615 21.5044 30.4854C19.1407 28.895 20.673 28.0209 22.0201 26.5923C22.3726 26.2185 28.4983 20.5295 28.6169 20.0135C28.6317 19.9489 28.6455 19.7083 28.5055 19.5813C28.3655 19.4543 28.1589 19.4977 28.0098 19.5322C27.7985 19.5812 24.4323 21.8529 17.9113 26.3473C16.9558 27.0172 16.0904 27.3435 15.315 27.3264C14.4602 27.3076 12.8159 26.833 11.5935 26.4273C10.0942 25.9296 8.90254 25.6666 9.0063 24.8215C9.06035 24.3813 9.65403 23.9311 10.7874 23.4709Z"></path>
-                <defs>
-                    <linearGradient id="paint0_linear" x1="24" x2="24" y2="47.644" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#2AABEE"></stop>
-                        <stop offset="1" stop-color="#229ED9"></stop>
-                    </linearGradient>
-                </defs>
-            </svg>
-            ,
+            </svg>,
             alt: 'Telegram'
         }
-
     ];
-
-
 
     return (
         <section className="section" id="contact">
             <div className="container">
                 <div className="flex items-center gap-3 mb-4">
-                    <div className="w-2 h-12 bg-teal-400 border-2 border-black"></div>
-                    <h2 className="headline-2">
-                        Contact me for collaboration
-                    </h2>
+                    <div className="w-1 h-10 bg-accent rounded-full"></div>
+                    <h2 className="headline-2">Contact me for collaboration</h2>
                 </div>
-                <p className="mt-3 mb-8 text-black max-w-[50ch] font-mono border-l-4 border-black pl-4 py-2">
+                <p className="mt-3 mb-8 text-ink-muted max-w-[50ch] leading-relaxed border-l-2 border-accent pl-4 py-1">
                     Reach out to me for any collaboration or project. I am always open to new opportunities and projects.
                 </p>
 
                 <div className="flex items-center gap-2 mt-auto flex-wrap">
-                    {
-                        socialLinks.map((item, index) => (
-                            <a key={index} href={item.href} target="_blank" className="grid w-12 h-12 border-2 border-black bg-white hover:bg-teal-400 place-items-center">
-                                {item.icon}
-                            </a>
-                        ))
-                    }
+                    {socialLinks.map((item, index) => (
+                        <a key={index} href={item.href} target="_blank" rel="noreferrer" className="grid w-12 h-12 border border-line rounded-xl bg-surface-2 text-ink-muted hover:text-accent hover:border-accent/50 place-items-center transition-colors">
+                            {item.icon}
+                        </a>
+                    ))}
                 </div>
-
-            </div >
-        </section >
+            </div>
+        </section>
     )
 }
 
